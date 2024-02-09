@@ -18,6 +18,15 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "app/page.tsx", "app/components/Logo.jsx", "app/roda/roda"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/page.tsx",
+    "app/components/Logo.jsx",
+    "app/roda/roda",
+    "app/layout.jsx"
+  ],
   "exclude": ["node_modules"]
 }
