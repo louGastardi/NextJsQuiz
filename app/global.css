@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-blue);
+}
+
+html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --white: #fff;
+  --blue: rgb(204, 222, 242);
+  --bg-button: #dea162;
+  --grey: #858583;
+  --grey-dark: #2b2b2b;
+  --red: #e80b09;
+  --hover: #ffcd6a;
+  --checked: #ffb522;
+  --bg-blue: #11384e;
+}

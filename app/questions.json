@@ -1,0 +1,55 @@
+{
+  "questions": [
+    {
+      "image": "https://media0.giphy.com/media/ox54bH454yDDmSnIf2/giphy.gif",
+      "title": "Who is the regional manager of Dunder Mifflin's Scranton branch?",
+      "options": ["Jim Halpert", "Dwight Schrute", "Michael Scott", "Pam Beesly"],
+      "correct_option": "2"
+    },
+    {
+      "title": "What is the name of the documentary crew in 'The Office'?",
+      "options": ["Dunder Mifflin Docs", "Office Chronicles", "Paper People Productions", "Scranton Stories"],
+      "correct_option": "0"
+    },
+    {
+      "title": "Which character is known for their love of beets and assistant to the regional manager?",
+      "options": ["Jim Halpert", "Pam Beesly", "Dwight Schrute", "Angela Martin"],
+      "correct_option": "2"
+    },
+    {
+      "title": "What is the name of the company that buys Dunder Mifflin in the later seasons?",
+      "options": ["Sabre", "Staples", "Utica Paper", "Vance Refrigeration"],
+      "correct_option": "0"
+    },
+    {
+      "title": "Who is the receptionist at Dunder Mifflin's Scranton branch?",
+      "options": ["Erin Hannon", "Phyllis Smith", "Meredith Palmer", "Pam Beesly"],
+      "correct_option": "3"
+    },
+    {
+      "title": "Which character is known for their love of playing pranks, especially on Dwight?",
+      "options": ["Jim Halpert", "Ryan Howard", "Kevin Malone", "Stanley Hudson"],
+      "correct_option": "0"
+    },
+    {
+      "title": "What is the name of Michael Scott's self-penned action movie?",
+      "options": ["Threat Level Midnight", "Goldenface: A Dunder Mifflin Story", "The Scranton Strangler", "Dunder Mifflin Blues"],
+      "correct_option": "0"
+    },
+    {
+      "title": "Who is the HR representative at Dunder Mifflin?",
+      "options": ["Toby Flenderson", "Kelly Kapoor", "Angela Martin", "Oscar Martinez"],
+      "correct_option": "0"
+    },
+    {
+      "title": "Which character is the beet farmer and owner of Schrute Farms?",
+      "options": ["Jim Halpert", "Pam Beesly", "Stanley Hudson", "Dwight Schrute"],
+      "correct_option": "3"
+    },
+    {
+      "title": "What is the name of the company that Pam works for in the final season?",
+      "options": ["Michael Scott Paper Company", "Pratt Institute", "Halpert Design", "Wernham Hogg"],
+      "correct_option": "2"
+    }
+  ]
+}

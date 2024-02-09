@@ -1,0 +1,22 @@
+.label {
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  margin-bottom: 2em;
+  padding: 12px;
+  text-align: center;
+}
+
+.label:hover {
+  color: var(--hover);
+  border: 2px solid var(--hover);
+  transition: color 0.3s, border 0.3s;
+}
+
+.input:checked + .label {
+  color: var(--checked);
+  border: 2px solid var(--checked);
+}
+
+.input {
+  display: none;
+}
