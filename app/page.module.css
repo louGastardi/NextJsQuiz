@@ -1,4 +1,5 @@
-.btn_main {
+.btn_main,
+.btn_answer {
   padding: 12px 100px;
   text-align: center;
   background-color: var(--white);
@@ -9,7 +10,8 @@
   text-decoration: none;
 }
 
-.btn_main:hover {
+.btn_main:hover,
+.btn_answer:hover {
   background-color: var(--blue);
   cursor: pointer;
 }

@@ -31,7 +31,6 @@ export default function Game() {
 
   return (
     <Template>
-      <h1>Let`s play, {username}</h1>
       <div className={stylesPage.questionsTamplate}>
         <Card headerTitle={question.title} headerSubtitle={`Question ${questionNumber} of ${questions.length}`}>
           <form
@@ -65,7 +64,7 @@ export default function Game() {
               <Alternative key={`key-${i}`} order={i} option={option} />
             ))}
             {answerState === answerStates.DEFAULT && (
-              <Button type="submit" className={stylesPage.btn_main}>
+              <Button type="submit" className={stylesPage.btn_answer}>
                 Answer!
               </Button>
             )}
