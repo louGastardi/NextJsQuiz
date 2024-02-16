@@ -1,5 +1,5 @@
 'use client';
-import React, { useContext } from 'react';
+import React, { Suspense } from 'react';
 import Card from '../components/Card';
 import Template from '../components/Template';
 import stylesPage from '../page.module.css';
@@ -30,51 +30,53 @@ export default function Game() {
   const username = searchParams.get('name');
 
   return (
-    <Template>
-      <div className={stylesPage.questionsTamplate}>
-        <Card headerTitle={question.title} headerSubtitle={`Question ${questionNumber} of ${questions.length}`}>
-          <form
-            className={stylesPage.form}
-            onSubmit={(event) => {
-              event.preventDefault();
+    <Suspense fallback={<div>Loading...</div>}>
+      <Template>
+        <div className={stylesPage.questionsTamplate}>
+          <Card headerTitle={question.title} headerSubtitle={`Question ${questionNumber} of ${questions.length}`}>
+            <form
+              className={stylesPage.form}
+              onSubmit={(event) => {
+                event.preventDefault();
 
-              const questionInfo = event.target as HTMLFormElement;
-              const formData = new FormData(questionInfo);
-              const { option } = Object.fromEntries(formData.entries());
-              const isCorrect = option === question.correct_option;
+                const questionInfo = event.target as HTMLFormElement;
+                const formData = new FormData(questionInfo);
+                const { option } = Object.fromEntries(formData.entries());
+                const isCorrect = option === question.correct_option;
 
-              if (isCorrect) {
-                setAnswerState(answerStates.SUCCESS);
-                setUserRightAnswer(userRightAnswer + 1);
-                console.log(userRightAnswer);
-              }
-              if (!isCorrect) {
-                setAnswerState(answerStates.ERROR);
-              }
-              setTimeout(() => {
-                if (!isLastQuestion) {
-                  setAnswerState(answerStates.DEFAULT);
-                  setCurrQuestion(currQuestion + 1);
-                } else {
-                  router.push(`/gameover?name=${encodeURIComponent(username)}&rightAnswers=${encodeURIComponent(userRightAnswer)}`);
+                if (isCorrect) {
+                  setAnswerState(answerStates.SUCCESS);
+                  setUserRightAnswer(userRightAnswer + 1);
+                  console.log(userRightAnswer);
                 }
-              }, 1000);
-            }}>
-            {question.options.map((option, i) => (
-              <Alternative key={`key-${i}`} order={i} option={option} />
-            ))}
-            {answerState === answerStates.DEFAULT && (
-              <Button type="submit" className={stylesPage.btn_answer}>
-                Answer!
-              </Button>
-            )}
-            <p style={{ textAlign: 'center' }}>
-              {answerState === answerStates.ERROR && <div className={stylesPage.btn_answer_wrong}>✖</div>}
-              {answerState === answerStates.SUCCESS && <div className={stylesPage.btn_answer_right}>✔</div>}
-            </p>
-          </form>
-        </Card>
-      </div>
-    </Template>
+                if (!isCorrect) {
+                  setAnswerState(answerStates.ERROR);
+                }
+                setTimeout(() => {
+                  if (!isLastQuestion) {
+                    setAnswerState(answerStates.DEFAULT);
+                    setCurrQuestion(currQuestion + 1);
+                  } else {
+                    router.push(`/gameover?name=${encodeURIComponent(username)}&rightAnswers=${encodeURIComponent(userRightAnswer)}`);
+                  }
+                }, 1000);
+              }}>
+              {question.options.map((option, i) => (
+                <Alternative key={`key-${i}`} order={i} option={option} />
+              ))}
+              {answerState === answerStates.DEFAULT && (
+                <Button type="submit" className={stylesPage.btn_answer}>
+                  Answer!
+                </Button>
+              )}
+              <p style={{ textAlign: 'center' }}>
+                {answerState === answerStates.ERROR && <div className={stylesPage.btn_answer_wrong}>✖</div>}
+                {answerState === answerStates.SUCCESS && <div className={stylesPage.btn_answer_right}>✔</div>}
+              </p>
+            </form>
+          </Card>
+        </div>
+      </Template>
+    </Suspense>
   );
 }
