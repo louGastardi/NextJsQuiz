@@ -2,7 +2,7 @@ import Link from 'next/link';
 import footerStyles from './footer.module.css';
 
 export default function Footer() {
-  const externalLinkPortfolio = 'https://github.com/louGastardi';
+  const externalLinkPortfolio = 'https://lougastardi.vercel.app/';
   const externalLinkGithub = 'https://github.com/louGastardi';
   const externalLinkLinkedin = 'https://www.linkedin.com/in/louisegastardi/';
 

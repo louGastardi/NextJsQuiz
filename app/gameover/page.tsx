@@ -34,7 +34,7 @@ export default function GameOver() {
   return (
     <Template>
       <div className={stylesPage.questionsTamplate}>
-        <Card headerTitle={titleChange}>
+        <Card headerTitle={titleChange} headerSubtitle={''}>
           <p className={stylesPage.text}>{endText}</p>
           <Link className={stylesPage.btn_main} href="/homepage">
             Try Again!
