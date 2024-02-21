@@ -1,5 +1,5 @@
 'use client';
-import { Suspense } from 'react';
+
 import Card from '../components/Card';
 import Template from '../components/Template';
 import stylesPage from '../page.module.css';
@@ -32,20 +32,18 @@ export default function GameOver() {
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Template>
-        <div className={stylesPage.questionsTamplate}>
-          <Card headerTitle={titleChange} headerSubtitle={''}>
-            <p className={stylesPage.text}>{endText}</p>
-            <Link className={stylesPage.btn_main} href="/homepage">
-              Try Again!
-            </Link>
-          </Card>
-          <div className={stylesPage.resultImage}>
-            <img src={gifUrl} alt="End gif" />
-          </div>
+    <Template>
+      <div className={stylesPage.questionsTamplate}>
+        <Card headerTitle={titleChange} headerSubtitle={''}>
+          <p className={stylesPage.text}>{endText}</p>
+          <Link className={stylesPage.btn_main} href="/homepage">
+            Try Again!
+          </Link>
+        </Card>
+        <div className={stylesPage.resultImage}>
+          <img src={gifUrl} alt="End gif" />
         </div>
-      </Template>
-    </Suspense>
+      </div>
+    </Template>
   );
 }
