@@ -1,0 +1,15 @@
+.btn_answer {
+  padding: 12px 100px;
+  text-align: center;
+  background-color: var(--white);
+  width: 100%;
+  border-radius: 2em;
+  color: var(--bg-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn_answer:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}
